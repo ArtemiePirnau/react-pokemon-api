@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrapper {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.single {
+  text-align: center;
+  &__btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 30px;
+  }
+  &__img {
+    width: 300px;
+  }
+  &__pokemon-name {
+    text-transform: uppercase;
+  }
+  &__pokemon-id {
+    font-size: 24px;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__pokemon {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+  }
+  &__pokemon-info {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 30px;
+    font-size: 24px;
+  }
+}
+.characteristics__item {
+  margin: 10px 0;
+}
+.pokemon-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+}
+.pokemon__image {
+  width: 120px;
+  height: 120px;
+}
+.load-more {
+  width: 100%;
+  background-color: #000;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  font-size: 24px;
+}
+.type {
+  box-shadow: 0px 0px 30px 1px #918f8f;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 15px;
+  text-align: center;
+}
+.load-more {
+  display: block;
+  margin: 0 auto;
+}
+.rock {
+  background-color: rgb(148, 81, 81);
+}
+.ghost {
+  background-color: rgb(247, 247, 247);
+}
+.electric {
+  background-color: rgb(255, 255, 161);
+}
+.bug {
+  background-color: #f6d6a7;
+}
+.poison {
+  background-color: #e0a7f6;
+}
+.normal {
+  background-color: #f4f4f4;
+}
+.fairy {
+  background-color: rgba(255, 192, 203, 0.863);
+}
+.fire {
+  background-color: #fbe3df;
+}
+.grass {
+  background-color: #e2f9e1;
+}
+.water {
+  background-color: #e0f1fd;
+}
+@media (max-width: 1200px) {
+  .pokemon-wrapper {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media (max-width: 768px) {
+  .pokemon-wrapper {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .single {
+    &__pokemon {
+      flex-wrap: wrap;
+    }
+    &__img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .single {
+    &__pokemon-info {
+      font-size: 18px;
+    }
+  }
+}
